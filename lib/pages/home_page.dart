@@ -124,28 +124,88 @@ class _HomePageState extends State<HomePage> {
               ),
 
               // ============= Mood Buttons
-              Row(
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  // Badly
-                  EmoticonFace(
-                    emoticonFace: '😫',
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    'Badly',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
+                  Column(
+                    children: [
+                      // Badly
+                      EmoticonFace(
+                        emoticonFace: '😫',
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Badly',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
 
                   //Fine
-
+                  Column(
+                    children: [
+                      // Badly
+                      EmoticonFace(
+                        emoticonFace: '😊',
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Fine',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                   //Well
-
+                  Column(
+                    children: [
+                      // Badly
+                      EmoticonFace(
+                        emoticonFace: '😁',
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Well',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                   //Excellent
+                  Column(
+                    children: [
+                      // Badly
+                      EmoticonFace(
+                        emoticonFace: '😍',
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Excellent',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
+              ),
+
+              Expanded(
+                child: Container(
+                  color: Colors.white,
+                ),
               ),
             ],
           ),

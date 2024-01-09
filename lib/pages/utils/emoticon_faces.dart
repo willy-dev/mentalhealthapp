@@ -13,9 +13,9 @@ class EmoticonFace extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       padding: const EdgeInsets.all(16),
-      child: const Center(
+      child: Center(
         child: Text(emoticonFace,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 28,
             )),
       ),
