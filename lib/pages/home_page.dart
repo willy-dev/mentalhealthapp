@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mentalhealthapp/pages/utils/emoticon_faces.dart';
+import 'package:mentalhealthapp/pages/utils/exercise_tile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -38,7 +39,8 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 25.0, vertical: 20),
               child: Column(
                 children: [
                   // ============= Greetings Row
@@ -85,12 +87,13 @@ class _HomePageState extends State<HomePage> {
                   ),
 
                   const SizedBox(
-                    height: 40,
+                    height: 30,
                   ),
 
                   // ============= Search Bar
                   Container(
-                    padding: const EdgeInsets.all(12),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
                     decoration: BoxDecoration(
                       color: Colors.blue[600],
                       borderRadius: BorderRadius.circular(12),
@@ -227,7 +230,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(
-              height: 25,
+              height: 10,
             ),
             Expanded(
               child: Container(
@@ -236,68 +239,45 @@ class _HomePageState extends State<HomePage> {
                 child: Center(
                   child: Column(
                     children: [
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Exercises',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                            ),
-                          ),
-                          Icon(Icons.more_horiz),
-                        ],
-                      ),
-                      // ============ Listview of exercises
-                      Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
+                      const Padding(
+                        padding: EdgeInsets.only(bottom: 10.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Row(
-                              children: [
-                                Container(
-                                  child:
-                                      Icon(Icons.favorite, color: Colors.white),
-                                  padding: const EdgeInsets.all(16),
-                                  decoration: BoxDecoration(
-                                    color: Colors.orange,
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Breathing Exercise',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      '15 mins',
-                                      style: TextStyle(
-                                        color: Colors.grey[600],
-                                        fontSize: 14,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                            Text(
+                              'Exercises',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
                             ),
                             Icon(Icons.more_horiz),
+                          ],
+                        ),
+                      ),
+                      // ============ Listview of exercises
+
+                      Expanded(
+                        child: ListView(
+                          children: [
+                            ExerciseTile(
+                              exerciseName: 'Breathing Exercise',
+                              numberOfExercises: 3,
+                              icon: Icons.favorite,
+                              color: Colors.orange,
+                            ),
+                            ExerciseTile(
+                              exerciseName: 'Reading Exercise',
+                              numberOfExercises: 10,
+                              icon: Icons.library_books_rounded,
+                              color: Colors.green,
+                            ),
+                            ExerciseTile(
+                              exerciseName: 'Physical Exercise',
+                              numberOfExercises: 8,
+                              icon: Icons.man_rounded,
+                              color: Colors.pink,
+                            ),
                           ],
                         ),
                       ),
