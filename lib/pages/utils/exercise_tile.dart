@@ -48,7 +48,7 @@ class ExerciseTile extends StatelessWidget {
                   children: [
                     Text(
                       exerciseName,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                       ),
