@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:mentalhealthapp/pages/utils/emoticon_faces.dart';
 import 'package:mentalhealthapp/pages/utils/exercise_tile.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,24 +16,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: CurvedNavigationBar(
+        color: Colors.white,
+        backgroundColor: Colors.blue.shade800,
+        animationDuration: const Duration(milliseconds: 300),
+        height: 50,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+          Icon(
+            Icons.home,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.calendar_today,
-            ),
-            label: 'Calendar',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-            ),
-            label: 'Profile',
-          ),
+          Icon(Icons.calendar_today),
+          Icon(Icons.person),
         ],
       ),
       body: SafeArea(
