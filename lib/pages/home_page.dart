@@ -23,10 +23,13 @@ class _HomePageState extends State<HomePage> {
         height: 50,
         items: const [
           Icon(
-            Icons.home,
+            Icons.home_filled,
           ),
-          Icon(Icons.settings),
-          Icon(Icons.person),
+          Icon(
+            Icons.settings_accessibility,
+            size: 30,
+          ),
+          Icon(Icons.person_rounded),
         ],
       ),
       body: SafeArea(
