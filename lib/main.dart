@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mentalhealthapp/pages/home_page.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+//import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());

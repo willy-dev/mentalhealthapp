@@ -17,15 +17,15 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.white,
-        backgroundColor: Colors.blue.shade800,
+        color: Colors.grey.shade200,
+        backgroundColor: Colors.blue.shade500,
         animationDuration: const Duration(milliseconds: 300),
         height: 50,
         items: const [
           Icon(
             Icons.home,
           ),
-          Icon(Icons.calendar_today),
+          Icon(Icons.settings),
           Icon(Icons.person),
         ],
       ),
